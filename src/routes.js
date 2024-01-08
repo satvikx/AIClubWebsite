@@ -61,6 +61,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Events from "layouts/pages/Events";
 import Blogs from "layouts/pages/Posts";
 import Teams from "layouts/pages/Teams";
+import ContactUs from "layouts/pages/Contact";
 // import Contact from "pages/LandingPages/AboutUs/sections/Contact";
 
 const routes = [
@@ -85,7 +86,8 @@ const routes = [
   {
     name: "Contact",
     icon: <GitHubIcon />,
-    href: "https://www.github.com/creativetimofficial/material-kit-react",
+    route: "layouts/pages/Contact",
+    component: <ContactUs />,
   },
 ];
 

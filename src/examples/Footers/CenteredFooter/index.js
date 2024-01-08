@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
@@ -33,9 +18,9 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function CenteredFooter({ company, links, socials, light }) {
-  const { href, name } = company;
+  const { href } = company;
 
-  const year = new Date().getFullYear();
+  // const year = new Date().getFullYear();
 
   const renderLinks = links.map((link) => (
     <MKTypography
@@ -84,7 +69,7 @@ function CenteredFooter({ company, links, socials, light }) {
         </Grid>
         <Grid item xs={12} lg={8} sx={{ textAlign: "center" }}>
           <MKTypography variant="body2" color={light ? "white" : "secondary"}>
-            Copyright &copy; {year} Material by{" "}
+            {/* Copyright &copy; {year} Material by{" "} */}
             <MKTypography
               component={Link}
               href={href}
@@ -93,7 +78,7 @@ function CenteredFooter({ company, links, socials, light }) {
               variant="body2"
               color={light ? "white" : "secondary"}
             >
-              {name}
+              {/* {name} */}
             </MKTypography>
             .
           </MKTypography>
@@ -105,30 +90,30 @@ function CenteredFooter({ company, links, socials, light }) {
 
 // Setting default values for the props of CenteredFooter
 CenteredFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "", name: "Creative Tim" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Company" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/presentation", name: "Team" },
-    { href: "https://www.creative-tim.com/templates/react", name: "Products" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "", name: "Company" },
+    { href: "", name: "About Us" },
+    { href: "", name: "Team" },
+    { href: "", name: "Products" },
+    { href: "", name: "Blog" },
+    { href: "", name: "License" },
   ],
   socials: [
-    { icon: <FacebookIcon fontSize="small" />, link: "https://www.facebook.com/CreativeTim/" },
+    { icon: <FacebookIcon fontSize="small" />, link: "" },
     {
       icon: <TwitterIcon fontSize="small" />,
-      link: "https://twitter.com/creativetim",
+      link: "",
     },
     {
       icon: <InstagramIcon fontSize="small" />,
-      link: "https://www.instagram.com/creativetimofficial/",
+      link: "",
     },
     {
       icon: <PinterestIcon fontSize="small" />,
-      link: "https://ro.pinterest.com/thecreativetim/",
+      link: "",
     },
-    { icon: <GitHubIcon fontSize="small" />, link: "https://github.com/creativetimofficial" },
+    { icon: <GitHubIcon fontSize="small" />, link: "" },
   ],
   light: false,
 };
